@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
 
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./app.js"></script>
   </head>
@@ -22,7 +23,7 @@
     <header class="site-header" data-scrolled="false">
       <div class="container header-inner">
         <a class="brand" href="./index.html" aria-label="Aktaşlar Mühendislik ana sayfa">
-          <span class="brand-mark" aria-hidden="true"></span>
+          <img class="brand-logo" src="./assets/logo.svg" alt="Aktaşlar Mühendislik" width="38" height="38" />
           <span class="brand-text">
             <span class="brand-name">Aktaşlar</span>
             <span class="brand-sub">Mühendislik</span>
@@ -39,6 +40,8 @@
             <a href="./index.html" aria-current="page">Ana Sayfa</a>
             <a href="./hakkimizda.html">Hakkımızda</a>
             <a href="#hizmetler" data-spy="true">Hizmetler</a>
+            <a href="#galeri">Projeler</a>
+            <a href="#surec">Süreç</a>
             <a href="#projeler">Çözümler</a>
             <a href="#guclendirme">Güçlendirme</a>
             <a href="#blog">Blog</a>
@@ -56,6 +59,7 @@
         <div class="container">
           <div class="hero-wide-inner">
             <div class="hero-wide-copy">
+              <p class="hero-brand">Aktaşlar Mühendislik</p>
               <p class="kicker">Yeni nesil şantiye disiplini</p>
               <h1 class="hero-title">
                 Güvenli yıkım, sağlam güçlendirme, kaliteli yaşam alanları.
@@ -268,6 +272,133 @@
         </div>
       </section>
 
+      <!-- GALLERY -->
+      <section id="galeri" class="section gallery" aria-label="Proje galerisi">
+        <div class="container">
+          <div class="section-head">
+            <h2>Projelerden kareler</h2>
+            <p>Yürüttüğümüz işlerin niteliğini, sahadaki detaylar belirler.</p>
+          </div>
+
+          <div class="gallery-grid" role="list">
+            <figure class="gallery-item" role="listitem">
+              <img src="./assets/hero-slide-renovation.jpg" alt="Yenileme ve restorasyon işi" loading="lazy" decoding="async" />
+              <figcaption>Restorasyon & yenileme</figcaption>
+            </figure>
+            <figure class="gallery-item" role="listitem">
+              <img src="./assets/gallery-retrofit.jpg" alt="Betonarme güçlendirme uygulaması" loading="lazy" decoding="async" />
+              <figcaption>Deprem güçlendirme</figcaption>
+            </figure>
+            <figure class="gallery-item" role="listitem">
+              <img src="./assets/gallery-villa.jpg" alt="Villa inşaat projesi" loading="lazy" decoding="async" />
+              <figcaption>Yeni yapı</figcaption>
+            </figure>
+            <figure class="gallery-item" role="listitem">
+              <img src="./assets/gallery-steel.jpg" alt="Çelik yapı montajı" loading="lazy" decoding="async" />
+              <figcaption>Çelik yapı</figcaption>
+            </figure>
+            <figure class="gallery-item" role="listitem">
+              <img src="./assets/hero-slide-demolition.jpg" alt="Kontrollü yıkım sahası" loading="lazy" decoding="async" />
+              <figcaption>Yıkım & hafriyat</figcaption>
+            </figure>
+            <figure class="gallery-item" role="listitem">
+              <img src="./assets/service-betonarme.jpg" alt="Betonarme imalat detayları" loading="lazy" decoding="async" />
+              <figcaption>Betonarme imalat</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section id="surec" class="section process" aria-label="Çalışma süreci">
+        <div class="container">
+          <div class="section-head">
+            <h2>Çalışma sürecimiz</h2>
+            <p>İşi hızlandıran şey “acele” değil, doğru sırayla doğru kontrolü kurmaktır.</p>
+          </div>
+
+          <div class="process-steps" role="list">
+            <div class="step" role="listitem">
+              <div class="step-no">1</div>
+              <div>
+                <h3>Keşif ve ihtiyaç analizi</h3>
+                <p>Yerinde inceleme, risk değerlendirmesi, kapsam netleştirme.</p>
+              </div>
+            </div>
+            <div class="step" role="listitem">
+              <div class="step-no">2</div>
+              <div>
+                <h3>Planlama ve iş programı</h3>
+                <p>Metraj, ekip planı, malzeme tedariki ve zaman çizelgesi.</p>
+              </div>
+            </div>
+            <div class="step" role="listitem">
+              <div class="step-no">3</div>
+              <div>
+                <h3>Uygulama ve kalite kontrol</h3>
+                <p>Kritik kontrol noktaları, fotoğraflı ilerleme ve saha güvenliği.</p>
+              </div>
+            </div>
+            <div class="step" role="listitem">
+              <div class="step-no">4</div>
+              <div>
+                <h3>Teslim ve temiz kapanış</h3>
+                <p>Kontrollü teslim, eksik listesi, sahayı düzenli bırakma.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STANDARDS -->
+      <section id="standartlar" class="section standards" aria-label="Güvenlik ve uyum">
+        <div class="container">
+          <div class="section-head">
+            <h2>Güvenlik ve uyum</h2>
+            <p>Yönetmelik uyumu ve saha güvenliği, “ekstra” değil işin kendisidir.</p>
+          </div>
+          <div class="standards-grid" role="list">
+            <div class="std" role="listitem">
+              <h3>Deprem yönetmeliği odağı</h3>
+              <p>Güçlendirme işlerinde performans hedefi ve uygulama detayları birlikte ele alınır.</p>
+            </div>
+            <div class="std" role="listitem">
+              <h3>Saha güvenliği planı</h3>
+              <p>Bariyerleme, iş izinleri, KKD disiplini ve çevre güvenliği prosedürleri.</p>
+            </div>
+            <div class="std" role="listitem">
+              <h3>Denetlenebilir üretim</h3>
+              <p>Kontrol listeleri, kritik imalat fotoğrafları ve ölçülebilir kalite adımları.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="sss" class="section faq" aria-label="Sık sorulan sorular">
+        <div class="container">
+          <div class="section-head">
+            <h2>Sık sorulan sorular</h2>
+            <p>Karar vermeden önce en çok sorulan başlıklar.</p>
+          </div>
+
+          <div class="faq-list">
+            <details>
+              <summary>Güçlendirme mi, yeniden yapım mı daha doğru?</summary>
+              <p>Yerinde keşif ve proje verilerine göre netleşir. Taşıyıcı sistem durumu, maliyet ve süre kıyasını birlikte değerlendiriyoruz.</p>
+            </details>
+            <details>
+              <summary>İş ne kadar sürer?</summary>
+              <p>Kapsam ve saha koşullarına göre değişir; net iş programını keşif sonrası paylaşıyoruz. Süreyi etkileyen kritik nokta tedarik ve koordinasyondur.</p>
+            </details>
+            <details>
+              <summary>Yıkım/hafriyat işlerinde çevre güvenliği nasıl sağlanır?</summary>
+              <p>Toz kontrolü, bariyerleme, güvenli tahliye rotaları ve alan sınırlandırma ile riskleri azaltıyoruz.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <!-- EARTHQUAKE CTA -->
       <section id="guclendirme" class="section cta" aria-label="Deprem ve güçlendirme">
         <div class="container cta-inner">
@@ -399,7 +530,7 @@
       <div class="container footer-inner">
         <div>
           <div class="footer-brand">
-            <span class="brand-mark" aria-hidden="true"></span>
+            <img class="brand-logo" src="./assets/logo.svg" alt="" width="32" height="32" />
             <span>
               <strong>Aktaşlar Mühendislik</strong><br />
               İnşaat • Güçlendirme • Restorasyon

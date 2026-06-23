@@ -102,6 +102,12 @@ section[id]{ scroll-margin-top: 96px; }
   align-items:center;
   gap: 12px;
 }
+.brand-logo{
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 10px 20px rgba(10,12,14,.12));
+}
 .brand-mark{
   width: 38px;
   height: 38px;
@@ -114,7 +120,7 @@ section[id]{ scroll-margin-top: 96px; }
   border: 1px solid rgba(14,18,22,.14);
 }
 .brand-text{ display:flex; flex-direction:column; line-height:1; }
-.brand-name{ font-weight: 750; letter-spacing:.25px; }
+.brand-name{ font-weight: 900; letter-spacing:.25px; font-size: 1.02rem; }
 .brand-sub{ font-size: .86rem; color: var(--muted); margin-top: 2px; }
 
 .nav{ display:flex; align-items:center; gap: 14px; position: relative; }
@@ -309,6 +315,15 @@ section[id]{ scroll-margin-top: 96px; }
   color: rgba(14,18,22,.78);
   font-weight: 650;
   margin: 0 0 16px;
+}
+
+.hero-brand{
+  margin: 0 0 8px;
+  font-family: var(--heading);
+  font-weight: 600;
+  letter-spacing: .12px;
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+  color: rgba(14,18,22,.88);
 }
 .kicker::before{
   content:"";
@@ -573,6 +588,118 @@ section[id]{ scroll-margin-top: 96px; }
   margin-bottom: 12px;
   box-shadow: 0 10px 26px rgba(10,12,14,.10);
 }
+
+/* Gallery */
+.gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+.gallery-item{
+  grid-column: span 4;
+  margin:0;
+  border-radius: 22px;
+  overflow:hidden;
+  border: 1px solid rgba(14,18,22,.12);
+  background: rgba(255,255,255,.88);
+  box-shadow: 0 12px 40px rgba(10,12,14,.10);
+}
+.gallery-item img{
+  width:100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+.gallery-item figcaption{
+  padding: 12px 14px 14px;
+  font-weight: 850;
+  color: rgba(14,18,22,.78);
+}
+
+/* Process */
+.process-steps{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.step{
+  display:flex;
+  gap: 12px;
+  border-radius: 22px;
+  border: 1px solid rgba(14,18,22,.12);
+  background: rgba(255,255,255,.88);
+  padding: 16px 16px 14px;
+  box-shadow: 0 12px 40px rgba(10,12,14,.08);
+}
+.step-no{
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  display:grid;
+  place-items:center;
+  font-weight: 950;
+  color: rgba(14,18,22,.84);
+  background: linear-gradient(180deg, rgba(42,168,137,.14), rgba(176,119,73,.10));
+  border: 1px solid rgba(14,18,22,.12);
+}
+.step h3{
+  margin: 0 0 8px;
+  font-family: var(--heading);
+}
+.step p{
+  margin: 0;
+  color: rgba(14,18,22,.66);
+  line-height: 1.65;
+}
+
+/* Standards */
+.standards-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.std{
+  border-radius: 22px;
+  border: 1px solid rgba(14,18,22,.12);
+  background:
+    radial-gradient(420px 220px at 0% 0%, rgba(42,168,137,.10), transparent 60%),
+    radial-gradient(420px 220px at 100% 100%, rgba(176,119,73,.10), transparent 62%),
+    rgba(255,255,255,.88);
+  padding: 18px 16px 16px;
+  box-shadow: 0 12px 40px rgba(10,12,14,.08);
+}
+.std h3{
+  margin: 0 0 10px;
+  font-family: var(--heading);
+}
+.std p{
+  margin: 0;
+  color: rgba(14,18,22,.66);
+  line-height: 1.65;
+}
+
+/* FAQ */
+.faq-list{
+  display:grid;
+  gap: 12px;
+}
+details{
+  border-radius: 18px;
+  border: 1px solid rgba(14,18,22,.12);
+  background: rgba(255,255,255,.90);
+  box-shadow: 0 12px 40px rgba(10,12,14,.07);
+  padding: 12px 14px;
+}
+summary{
+  cursor: pointer;
+  font-weight: 900;
+  color: rgba(14,18,22,.82);
+}
+details p{
+  margin: 10px 0 0;
+  color: rgba(14,18,22,.66);
+  line-height: 1.65;
+}
 .card > *{ position:relative; }
 .card h3{
   margin: 0 0 8px;
@@ -804,6 +931,9 @@ select option{ color:#000; }
   .contact-inner{ grid-template-columns: 1fr; }
   .cta-inner{ flex-direction: column; align-items:flex-start; }
   .cta-actions{ justify-content:flex-start; }
+  .gallery-item{ grid-column: span 6; }
+  .process-steps{ grid-template-columns: 1fr; }
+  .standards-grid{ grid-template-columns: 1fr; }
 }
 @media (max-width: 720px){
   .section{ padding: 74px 0; }
@@ -812,6 +942,7 @@ select option{ color:#000; }
   .hero-metrics{ grid-template-columns: 1fr; }
   .section-head{ flex-direction: column; align-items:flex-start; }
   .cards{ grid-template-columns: 1fr; }
+  .gallery-item{ grid-column: span 12; }
 
   .nav-toggle{ display:inline-flex; }
   .nav-panel{
