@@ -278,6 +278,12 @@ section[id]{ scroll-margin-top: 96px; }
   position: relative;
   z-index: 4;
 }
+.hero-cta-bar{
+  padding: 2px 0 14px;
+}
+.hero-cta-bar .hero-actions{
+  justify-content: center;
+}
 .hero-wide + .about{
   padding-top: 28px;
 }
