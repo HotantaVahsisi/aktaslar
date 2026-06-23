@@ -1,4 +1,4 @@
-## Aktaşlar Mühendislik (Static Site)
+## Aktaş Yapı Mühendislik (Static Site)
 
 Bu proje düz HTML/CSS/JS ile hazırlanmış statik bir web sitesidir.
 
@@ -18,4 +18,3 @@ Bu proje düz HTML/CSS/JS ile hazırlanmış statik bir web sitesidir.
 4. Build Command: boş bırakın
 5. Output Directory: boş bırakın
 6. Deploy
-
