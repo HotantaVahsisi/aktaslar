@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aktaşlar Mühendislik | İnşaat, güçlendirme, restorasyon ve yıkım çözümleri" />
+    <title>Aktaşlar Mühendislik</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+    <header class="site-header" data-scrolled="false">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Aktaşlar Mühendislik ana sayfa">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <span class="brand-name">Aktaşlar</span>
+            <span class="brand-sub">Mühendislik</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Ana menü">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navPanel">
+            <span class="nav-toggle-lines" aria-hidden="true"></span>
+            Menü
+          </button>
+
+          <div id="navPanel" class="nav-panel" data-open="false">
+            <a href="./index.html">Ana Sayfa</a>
+            <a href="./hakkimizda.html">Hakkımızda</a>
+            <a href="#hizmetler">Hizmetler</a>
+            <a href="#projeler">Çözümler</a>
+            <a href="#guclendirme">Güçlendirme</a>
+            <a href="#blog">Blog</a>
+            <a class="nav-cta" href="#iletisim">Teklif al</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="icerik">
+      <!-- HERO -->
+      <section id="top" class="hero" aria-label="Vitrin">
+        <div class="hero-bg" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="kicker">Yeni nesil şantiye disiplini</p>
+            <h1 class="hero-title">
+              Güvenli yıkım, sağlam güçlendirme, kaliteli yaşam alanları.
+            </h1>
+            <p class="hero-lead">
+              Aktaşlar Mühendislik; inşaat, restorasyon ve betonarme güçlendirme
+              projelerinde süreci uçtan uca yönetir. Net plan, görünür ilerleme ve
+              yönetmelik uyumu aynı standartta yürür.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#iletisim">Projeni konuşalım</a>
+              <a class="btn ghost" href="#hizmetler">Hizmetleri incele</a>
+            </div>
+
+            <div class="hero-metrics" role="list" aria-label="Öne çıkan faydalar">
+              <div class="metric" role="listitem">
+                <span class="metric-title">Güvenlik</span>
+                <span class="metric-sub">Saha odaklı uygulama</span>
+              </div>
+              <div class="metric" role="listitem">
+                <span class="metric-title">Zaman</span>
+                <span class="metric-sub">Planlı iş akışı</span>
+              </div>
+              <div class="metric" role="listitem">
+                <span class="metric-title">Kalite</span>
+                <span class="metric-sub">Denetlenebilir üretim</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-slider" aria-label="Öne çıkan başlıklar">
+            <div class="hero-photo" aria-hidden="true">
+              <img
+                src="./assets/hero-construction.jpg"
+                alt=""
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <div class="slides" data-active="0">
+              <article class="slide" data-index="0">
+                <p class="slide-eyebrow">Kaliteli hayatlar</p>
+                <h2>Kaliteli yaşam alanları</h2>
+                <p>
+                  Restorasyon ve imalat süreçlerinde detayları kaçırmayan, şantiye
+                  ritmini bozmayan bir proje kurgusu.
+                </p>
+              </article>
+              <article class="slide" data-index="1">
+                <p class="slide-eyebrow">Güvenli yıkım</p>
+                <h2>Güvenli yenileme</h2>
+                <p>
+                  Kırım, yıkım ve hafriyat işlerinde kontrollü saha planı, güvenli
+                  tahliye ve temiz teslim yaklaşımı.
+                </p>
+              </article>
+              <article class="slide" data-index="2">
+                <p class="slide-eyebrow">İnşa etmek</p>
+                <h2>Hayal etmekle başlar</h2>
+                <p>
+                  Teknik gereklilikleri estetik ve işlevle birleştirip sürdürülebilir
+                  yapılar üretmek için tasarımı sahayla aynı dile getiriyoruz.
+                </p>
+              </article>
+            </div>
+
+            <div class="slider-controls">
+              <button class="icon-btn" type="button" data-slide="prev" aria-label="Önceki">
+                <span aria-hidden="true">←</span>
+              </button>
+              <div class="dots" role="tablist" aria-label="Slayt seçimi">
+                <button class="dot" type="button" role="tab" aria-selected="true" data-dot="0">
+                  <span class="sr-only">1</span>
+                </button>
+                <button class="dot" type="button" role="tab" aria-selected="false" data-dot="1">
+                  <span class="sr-only">2</span>
+                </button>
+                <button class="dot" type="button" role="tab" aria-selected="false" data-dot="2">
+                  <span class="sr-only">3</span>
+                </button>
+              </div>
+              <button class="icon-btn" type="button" data-slide="next" aria-label="Sonraki">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section about" aria-label="Hakkımızda">
+        <div class="container grid-2">
+          <div>
+            <h2>Aktaşlar Mühendislik</h2>
+            <p class="lead">
+              Projeleri yalnızca “yapmak” için değil, doğru sırayla ve doğru ölçülerle
+              yönetmek için sahadayız.
+            </p>
+            <p>
+              İnşaat imalatları, güçlendirme ve yenileme işlerinde; keşif, planlama,
+              uygulama ve teslim adımlarını tek bir disiplin altında toplarız.
+              İşin ilerleyişini görünür kılan raporlama ve net iletişim, işin kalitesi
+              kadar önceliğimizdir.
+            </p>
+            <div class="about-badges" role="list" aria-label="Yaklaşımımız">
+              <span class="badge" role="listitem">Yönetmelik uyumu</span>
+              <span class="badge" role="listitem">Saha güvenliği</span>
+              <span class="badge" role="listitem">Ölçülebilir kalite</span>
+              <span class="badge" role="listitem">Şeffaf süreç</span>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-top">
+              <h3>Çalışma prensibi</h3>
+              <p>
+                Her proje için; risk analizi, iş programı ve kalite kontrol adımlarını
+                baştan tanımlarız.
+              </p>
+            </div>
+            <div class="about-card-bottom" role="list">
+              <div class="mini" role="listitem">
+                <span class="mini-title">Keşif</span>
+                <span class="mini-sub">Saha & ihtiyaç analizi</span>
+              </div>
+              <div class="mini" role="listitem">
+                <span class="mini-title">Plan</span>
+                <span class="mini-sub">İş programı & kaynak</span>
+              </div>
+              <div class="mini" role="listitem">
+                <span class="mini-title">Uygulama</span>
+                <span class="mini-sub">Kontrollü üretim</span>
+              </div>
+              <div class="mini" role="listitem">
+                <span class="mini-title">Teslim</span>
+                <span class="mini-sub">Temiz kapanış</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="hizmetler" class="section services" aria-label="Hizmetler">
+        <div class="container">
+          <div class="section-head">
+            <h2>Hizmetler</h2>
+            <p>
+              Şantiyenin kritik başlıklarını tek çatı altında topluyoruz: yıkım,
+              imalat, güçlendirme ve yenileme.
+            </p>
+          </div>
+
+          <div class="cards" role="list">
+            <article class="card" role="listitem">
+              <img class="card-media" src="./assets/service-hafriyat.jpg" alt="Hafriyat ve kırım sahası" loading="lazy" decoding="async" />
+              <h3>Hafriyat ve Kırım</h3>
+              <p>Güvenli saha kurgusu, kontrollü tahliye, temiz teslim.</p>
+              <a class="card-link" href="#iletisim">Bilgi al</a>
+            </article>
+            <article class="card" role="listitem">
+              <img class="card-media" src="./assets/service-betonarme.jpg" alt="Betonarme imalat detayları" loading="lazy" decoding="async" />
+              <h3>Betonarme İmalatlar</h3>
+              <p>Taşıyıcı sistem, kalıp-donatı-beton süreçlerinde kalite kontrol.</p>
+              <a class="card-link" href="#iletisim">Bilgi al</a>
+            </article>
+            <article class="card" role="listitem">
+              <img class="card-media" src="./assets/service-guclendirme.jpg" alt="Betonarme güçlendirme çalışması" loading="lazy" decoding="async" />
+              <h3>Betonarme Güçlendirme</h3>
+              <p>Deprem performansı için hesap, uygulama ve denetim bütünlüğü.</p>
+              <a class="card-link" href="#guclendirme">Detay</a>
+            </article>
+            <article class="card" role="listitem">
+              <img class="card-media" src="./assets/service-celik.jpg" alt="Çelik yapı imalatı" loading="lazy" decoding="async" />
+              <h3>Çelik Yapı İmalatları</h3>
+              <p>Hızlı montaj, yüksek dayanım, net proje takibi.</p>
+              <a class="card-link" href="#iletisim">Bilgi al</a>
+            </article>
+            <article class="card" role="listitem">
+              <h3>Restorasyon ve Yenileme</h3>
+              <p>Mevcut yapıyı koruyan, detay odaklı ve sürdürülebilir yenileme.</p>
+              <a class="card-link" href="#iletisim">Bilgi al</a>
+            </article>
+            <article class="card" role="listitem">
+              <h3>Projelendirme ve Ruhsat</h3>
+              <p>İhtiyaca uygun proje seti, onay süreçleri ve koordinasyon.</p>
+              <a class="card-link" href="#iletisim">Bilgi al</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTIONS / PROJECTS -->
+      <section id="projeler" class="section solutions" aria-label="Çözümler">
+        <div class="container">
+          <div class="section-head">
+            <h2>Çözümler</h2>
+            <p>Farklı proje tiplerinde aynı disiplin: risk, plan, kalite, teslim.</p>
+          </div>
+
+          <div class="solutions-grid">
+            <div class="solution">
+              <p class="solution-tag">Konut</p>
+              <h3>Yeni yapılar</h3>
+              <p>İmalat standardı, saha güvenliği ve net iş programı.</p>
+            </div>
+            <div class="solution">
+              <p class="solution-tag">Güçlendirme</p>
+              <h3>Deprem performansı</h3>
+              <p>Hesap + uygulama + denetim çizgisinde tutarlı yürüyüş.</p>
+            </div>
+            <div class="solution">
+              <p class="solution-tag">Yenileme</p>
+              <h3>Restorasyon</h3>
+              <p>Mevcut dokuyu bozmadan yenileme ve detay yönetimi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EARTHQUAKE CTA -->
+      <section id="guclendirme" class="section cta" aria-label="Deprem ve güçlendirme">
+        <div class="container cta-inner">
+          <div>
+            <p class="kicker">Deprem ve güçlendirme</p>
+            <h2>Riskleri görünür kıl, yapıyı güçlendir.</h2>
+            <p>
+              Yapısal iyileştirmeyi yalnızca uygulama olarak değil, süreç olarak ele
+              alıyoruz: keşif, rapor, proje, uygulama ve kontrol aynı çerçevede ilerler.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn primary" href="#iletisim">Ücretsiz ön görüşme</a>
+            <a class="btn ghost" href="#blog">Bilgi içerikleri</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section id="blog" class="section blog" aria-label="Blog">
+        <div class="container">
+          <div class="section-head">
+            <h2>Blog</h2>
+            <p>Güçlendirme, imalat ve şantiye yönetimi üzerine kısa notlar.</p>
+          </div>
+
+          <div class="posts" role="list">
+            <article class="post" role="listitem">
+              <p class="post-date">Yeni</p>
+              <h3>Güçlendirmede en sık görülen saha hataları</h3>
+              <p>
+                Uygulama adımlarında küçük sapmalar, performansı büyük ölçekte etkiler.
+                Kontrol listesiyle işin ritmini korumak mümkün.
+              </p>
+              <a href="#iletisim" class="post-link">Sorun, birlikte değerlendirelim</a>
+            </article>
+            <article class="post" role="listitem">
+              <p class="post-date">Rehber</p>
+              <h3>Yıkım ve kırım işlerinde güvenlik planı</h3>
+              <p>
+                Saha bariyerleri, toz kontrolü, moloz yönetimi ve çevre güvenliği. Doğru
+                plan, işin süresini de kısaltır.
+              </p>
+              <a href="#iletisim" class="post-link">Teklif iste</a>
+            </article>
+            <article class="post" role="listitem">
+              <p class="post-date">Not</p>
+              <h3>Betonarme imalatta kaliteyi belirleyen 4 kontrol noktası</h3>
+              <p>
+                Donatı, kalıp, beton dökümü ve kür. Her adımda ölçülebilir kaliteyle
+                ilerlemek, sonradan “tamir” ihtiyacını azaltır.
+              </p>
+              <a href="#iletisim" class="post-link">İletişime geç</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="iletisim" class="section contact" aria-label="İletişim">
+        <div class="container contact-inner">
+          <div class="contact-card">
+            <h2>Teklif ve proje görüşmesi</h2>
+            <p>
+              Projenizin türünü ve lokasyonunu yazın; aynı gün içinde dönüş yapalım.
+            </p>
+
+            <form class="form" action="#" method="post" onsubmit="return false" aria-label="İletişim formu">
+              <label>
+                <span>Ad Soyad</span>
+                <input name="name" autocomplete="name" placeholder="Adınız Soyadınız" required />
+              </label>
+              <label>
+                <span>Telefon</span>
+                <input name="phone" autocomplete="tel" placeholder="+90 5xx xxx xx xx" required />
+              </label>
+              <label>
+                <span>Konu</span>
+                <select name="subject" required>
+                  <option value="" disabled selected>Seçiniz</option>
+                  <option>Güçlendirme</option>
+                  <option>Hafriyat / Kırım</option>
+                  <option>Betonarme imalat</option>
+                  <option>Çelik yapı</option>
+                  <option>Restorasyon</option>
+                  <option>Diğer</option>
+                </select>
+              </label>
+              <label class="full">
+                <span>Not</span>
+                <textarea name="message" rows="4" placeholder="Kısaca ihtiyacınızı yazın..."></textarea>
+              </label>
+              <div class="full form-actions">
+                <button class="btn primary" type="submit">Gönder</button>
+                <a class="btn ghost" href="tel:+905000000000">Hemen ara</a>
+              </div>
+              <p class="form-hint">
+                Not: Bu örnek sitede form gönderimi demo amaçlıdır. İstersen bunu e-posta veya WhatsApp’a bağlayabiliriz.
+              </p>
+            </form>
+          </div>
+
+          <aside class="contact-aside" aria-label="İletişim bilgileri">
+            <div class="info">
+              <h3>Adres</h3>
+              <p>İstanbul, Türkiye (örnek)</p>
+            </div>
+            <div class="info">
+              <h3>Telefon</h3>
+              <p><a href="tel:+905000000000">+90 500 000 00 00</a></p>
+            </div>
+            <div class="info">
+              <h3>E-posta</h3>
+              <p><a href="mailto:info@aktaslar.com">info@aktaslar.com</a></p>
+            </div>
+            <div class="info info-highlight">
+              <h3>Çalışma yaklaşımı</h3>
+              <p>
+                Süreç planı + saha güvenliği + kalite kontrol. Proje boyunca her adım
+                görünür ve takip edilebilir.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" aria-label="Alt bilgi">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>
+              <strong>Aktaşlar Mühendislik</strong><br />
+              İnşaat • Güçlendirme • Restorasyon
+            </span>
+          </div>
+          <p class="footer-note">
+            Bu site, talep edilen yapıyı referans alarak hazırlanmış özgün bir taslak arayüzdür.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#hizmetler">Hizmetler</a>
+          <a href="#guclendirme">Güçlendirme</a>
+          <a href="#iletisim">İletişim</a>
+        </div>
+        <div class="footer-small">
+          <span>© <span id="year"></span> Aktaşlar Mühendislik</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
