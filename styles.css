@@ -257,14 +257,17 @@ section[id]{ scroll-margin-top: 96px; }
 .hero-carousel .slides{
   width: min(100%, var(--container));
   margin: 0 auto;
-  min-height: clamp(420px, 62vh, 720px);
+  min-height: clamp(300px, 46vh, 520px);
 }
 .hero-carousel .slider-controls{
   width: min(100%, var(--container));
   margin: 0 auto;
   border-top: 0;
   background: transparent;
-  padding: 8px 0 6px;
+  margin-top: -22px;
+  padding: 0 0 8px;
+  position: relative;
+  z-index: 4;
 }
 .hero-wide + .about{
   padding-top: 28px;
@@ -927,7 +930,7 @@ select option{ color:#000; }
   .hero-inner{ grid-template-columns: 1fr; }
   .hero-slider{ position:relative; top:auto; }
   .hero-wide-inner{ grid-template-columns: 1fr; }
-  .hero-carousel .slides{ min-height: clamp(360px, 56vh, 640px); }
+  .hero-carousel .slides{ min-height: clamp(260px, 40vh, 400px); }
   .grid-2{ grid-template-columns: 1fr; }
   .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .solutions-grid{ grid-template-columns: 1fr; }
