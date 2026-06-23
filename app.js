@@ -46,22 +46,25 @@
     });
   }
 
-  // Slider
-  const slides = document.querySelector(".slides");
-  if (slides) {
-    const total = slides.querySelectorAll(".slide").length;
-    const dots = Array.from(document.querySelectorAll("[data-dot]"));
+  // Slider (supports multiple sliders on page)
+  document.querySelectorAll(".slides").forEach((slidesEl) => {
+    const total = slidesEl.querySelectorAll(".slide").length;
+    if (total <= 1) return;
+
+    const sliderRoot = slidesEl.closest(".hero-carousel, .hero-slider") || document;
+    const dots = Array.from(sliderRoot.querySelectorAll("[data-dot]"));
+
     const setActive = (idx) => {
-      const next = (idx + total) % total;
-      slides.setAttribute("data-active", String(next));
-      dots.forEach((d) => d.setAttribute("aria-selected", d.getAttribute("data-dot") === String(next) ? "true" : "false"));
+      const nextIdx = (idx + total) % total;
+      slidesEl.setAttribute("data-active", String(nextIdx));
+      dots.forEach((d) => d.setAttribute("aria-selected", d.getAttribute("data-dot") === String(nextIdx) ? "true" : "false"));
     };
 
-    const getActive = () => Number(slides.getAttribute("data-active") || "0");
+    const getActive = () => Number(slidesEl.getAttribute("data-active") || "0");
     const next = () => setActive(getActive() + 1);
     const prev = () => setActive(getActive() - 1);
 
-    document.querySelectorAll("[data-slide]").forEach((btn) => {
+    sliderRoot.querySelectorAll("[data-slide]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const dir = btn.getAttribute("data-slide");
         if (dir === "next") next();
@@ -88,11 +91,72 @@
       timer = null;
     };
 
-    slides.addEventListener("mouseenter", stop);
-    slides.addEventListener("mouseleave", start);
-    slides.addEventListener("focusin", stop);
-    slides.addEventListener("focusout", start);
+    slidesEl.addEventListener("mouseenter", stop);
+    slidesEl.addEventListener("mouseleave", start);
+    slidesEl.addEventListener("focusin", stop);
+    slidesEl.addEventListener("focusout", start);
     start();
+  });
+
+  // Scroll-spy: hangi bölümdeyim?
+  const navLinks = Array.from(document.querySelectorAll('.nav-panel a[href*="#"]'))
+    .filter((a) => {
+      try {
+        const url = new URL(a.getAttribute("href") || "", window.location.href);
+        return url.pathname === window.location.pathname && !!url.hash;
+      } catch {
+        return false;
+      }
+    })
+    .map((a) => {
+      const url = new URL(a.getAttribute("href") || "", window.location.href);
+      const id = url.hash.replace("#", "");
+      const section = document.getElementById(id);
+      return { a, section };
+    })
+    .filter((x) => x.section);
+
+  if (navLinks.length) {
+    const clearActive = () => {
+      navLinks.forEach(({ a, section }) => {
+        a.classList.remove("is-active");
+        section.classList.remove("is-current");
+      });
+    };
+
+    const setActive = (id) => {
+      clearActive();
+      navLinks.forEach(({ a, section }) => {
+        if (section.id === id) {
+          a.classList.add("is-active");
+          section.classList.add("is-current");
+        }
+      });
+    };
+
+    let current = null;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0));
+        if (!visible.length) return;
+        const top = visible[0].target;
+        if (!(top instanceof HTMLElement)) return;
+        if (current === top.id) return;
+        current = top.id;
+        setActive(current);
+      },
+      { root: null, threshold: [0.22, 0.35, 0.5, 0.7], rootMargin: "-18% 0px -62% 0px" },
+    );
+
+    navLinks.forEach(({ section }) => observer.observe(section));
+
+    // İlk yüklemede hash varsa işaretle
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const section = document.getElementById(id);
+      if (section) setActive(id);
+    }
   }
 })();
-

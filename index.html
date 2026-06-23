@@ -36,9 +36,9 @@
           </button>
 
           <div id="navPanel" class="nav-panel" data-open="false">
-            <a href="./index.html">Ana Sayfa</a>
+            <a href="./index.html" aria-current="page">Ana Sayfa</a>
             <a href="./hakkimizda.html">Hakkımızda</a>
-            <a href="#hizmetler">Hizmetler</a>
+            <a href="#hizmetler" data-spy="true">Hizmetler</a>
             <a href="#projeler">Çözümler</a>
             <a href="#guclendirme">Güçlendirme</a>
             <a href="#blog">Blog</a>
@@ -50,24 +50,25 @@
 
     <main id="icerik">
       <!-- HERO -->
-      <section id="top" class="hero" aria-label="Vitrin">
+      <section id="top" class="hero hero-wide" aria-label="Vitrin">
         <div class="hero-bg" aria-hidden="true"></div>
 
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <p class="kicker">Yeni nesil şantiye disiplini</p>
-            <h1 class="hero-title">
-              Güvenli yıkım, sağlam güçlendirme, kaliteli yaşam alanları.
-            </h1>
-            <p class="hero-lead">
-              Aktaşlar Mühendislik; inşaat, restorasyon ve betonarme güçlendirme
-              projelerinde süreci uçtan uca yönetir. Net plan, görünür ilerleme ve
-              yönetmelik uyumu aynı standartta yürür.
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn primary" href="#iletisim">Projeni konuşalım</a>
-              <a class="btn ghost" href="#hizmetler">Hizmetleri incele</a>
+        <div class="container">
+          <div class="hero-wide-inner">
+            <div class="hero-wide-copy">
+              <p class="kicker">Yeni nesil şantiye disiplini</p>
+              <h1 class="hero-title">
+                Güvenli yıkım, sağlam güçlendirme, kaliteli yaşam alanları.
+              </h1>
+              <p class="hero-lead">
+                Aktaşlar Mühendislik; inşaat, restorasyon ve betonarme güçlendirme
+                projelerinde süreci uçtan uca yönetir. Net plan, görünür ilerleme ve
+                yönetmelik uyumu aynı standartta yürür.
+              </p>
+              <div class="hero-actions">
+                <a class="btn primary" href="#iletisim">Projeni konuşalım</a>
+                <a class="btn ghost" href="#hizmetler">Hizmetleri incele</a>
+              </div>
             </div>
 
             <div class="hero-metrics" role="list" aria-label="Öne çıkan faydalar">
@@ -85,62 +86,54 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="hero-slider" aria-label="Öne çıkan başlıklar">
-            <div class="hero-photo" aria-hidden="true">
-              <img
-                src="./assets/hero-construction.jpg"
-                alt=""
-                loading="eager"
-                decoding="async"
-              />
-            </div>
-            <div class="slides" data-active="0">
-              <article class="slide" data-index="0">
+        <div class="hero-carousel" aria-label="Öne çıkan başlıklar">
+          <div class="slides" data-active="0">
+            <article class="slide slide-wide" data-index="0">
+              <img class="slide-bg" src="./assets/hero-construction.jpg" alt="" loading="eager" decoding="async" />
+              <div class="slide-overlay">
                 <p class="slide-eyebrow">Kaliteli hayatlar</p>
                 <h2>Kaliteli yaşam alanları</h2>
-                <p>
-                  Restorasyon ve imalat süreçlerinde detayları kaçırmayan, şantiye
-                  ritmini bozmayan bir proje kurgusu.
-                </p>
-              </article>
-              <article class="slide" data-index="1">
+                <p>Restorasyon ve imalat süreçlerinde detayları kaçırmayan, net ve kontrollü bir yürüyüş.</p>
+              </div>
+            </article>
+            <article class="slide slide-wide" data-index="1">
+              <img class="slide-bg" src="./assets/hero-slide-demolition.jpg" alt="" loading="lazy" decoding="async" />
+              <div class="slide-overlay">
                 <p class="slide-eyebrow">Güvenli yıkım</p>
                 <h2>Güvenli yenileme</h2>
-                <p>
-                  Kırım, yıkım ve hafriyat işlerinde kontrollü saha planı, güvenli
-                  tahliye ve temiz teslim yaklaşımı.
-                </p>
-              </article>
-              <article class="slide" data-index="2">
+                <p>Kırım, yıkım ve hafriyat işlerinde kontrollü saha planı, güvenli tahliye ve temiz teslim.</p>
+              </div>
+            </article>
+            <article class="slide slide-wide" data-index="2">
+              <img class="slide-bg" src="./assets/hero-slide-renovation.jpg" alt="" loading="lazy" decoding="async" />
+              <div class="slide-overlay">
                 <p class="slide-eyebrow">İnşa etmek</p>
                 <h2>Hayal etmekle başlar</h2>
-                <p>
-                  Teknik gereklilikleri estetik ve işlevle birleştirip sürdürülebilir
-                  yapılar üretmek için tasarımı sahayla aynı dile getiriyoruz.
-                </p>
-              </article>
-            </div>
-
-            <div class="slider-controls">
-              <button class="icon-btn" type="button" data-slide="prev" aria-label="Önceki">
-                <span aria-hidden="true">←</span>
-              </button>
-              <div class="dots" role="tablist" aria-label="Slayt seçimi">
-                <button class="dot" type="button" role="tab" aria-selected="true" data-dot="0">
-                  <span class="sr-only">1</span>
-                </button>
-                <button class="dot" type="button" role="tab" aria-selected="false" data-dot="1">
-                  <span class="sr-only">2</span>
-                </button>
-                <button class="dot" type="button" role="tab" aria-selected="false" data-dot="2">
-                  <span class="sr-only">3</span>
-                </button>
+                <p>Tasarımdan uygulamaya, işlevi ve estetiği aynı çizgide buluşturan proje kurgusu.</p>
               </div>
-              <button class="icon-btn" type="button" data-slide="next" aria-label="Sonraki">
-                <span aria-hidden="true">→</span>
+            </article>
+          </div>
+
+          <div class="slider-controls">
+            <button class="icon-btn" type="button" data-slide="prev" aria-label="Önceki">
+              <span aria-hidden="true">←</span>
+            </button>
+            <div class="dots" role="tablist" aria-label="Slayt seçimi">
+              <button class="dot" type="button" role="tab" aria-selected="true" data-dot="0">
+                <span class="sr-only">1</span>
+              </button>
+              <button class="dot" type="button" role="tab" aria-selected="false" data-dot="1">
+                <span class="sr-only">2</span>
+              </button>
+              <button class="dot" type="button" role="tab" aria-selected="false" data-dot="2">
+                <span class="sr-only">3</span>
               </button>
             </div>
+            <button class="icon-btn" type="button" data-slide="next" aria-label="Sonraki">
+              <span aria-hidden="true">→</span>
+            </button>
           </div>
         </div>
       </section>
